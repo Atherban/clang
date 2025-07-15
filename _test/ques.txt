@@ -1,0 +1,3 @@
+1.WAP to convert decimal to Binary
+2.WAP to print pattern 
+3.WAP to split array into two arrays ,if array is of odd index than print cannot be divided.

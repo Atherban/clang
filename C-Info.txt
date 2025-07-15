@@ -1,0 +1,200 @@
+BCPL -> Basic combined programming language
+1967 -> Ken Thompson, Martin Richard
+
+Updated versioin of BCPL -> B programming 1969
+
+C programming -> 1970 - 72 , USA AT & TL Lab
+
+Features of C :
+- Portable
+- Structural
+- Functional / Modular
+- Top Down Approach
+- Pointers
+
+Datatypes in C :
+- Pre-Defined :
+    char -
+        signed char
+        unsigned char
+    integer -
+        signed integer (both + -)
+        unsigned integer (positive +)
+    long int
+    float
+    double 
+    long double
+    void
+
+- User-Defined :
+    structure
+    union
+    enum
+    class
+
+- Derived :
+    Arrays
+    Pointer
+
+C tokens :
+ - Identifiers
+ - Variables :
+    Local
+    Global
+    Reference
+ - Constants
+ - Keywords
+ - Expression
+ - Operators 
+    Unary :
+        Increment / Decrement
+    Binary :
+        Arithematic
+        Relational
+        Conditional
+    Ternary :
+
+Qeus :
+
+1.
+a = 10                      
+b = 20 
+c = 30 
+
+a = (a++) + (++b)
+b = (++b) - (c++)
+c = (--a) + (--c)
+
+2.
+a = 4
+b = 5
+c = 6
+d = 7
+a =b++ + ++c -d + ++b;
+
+3.
+a = 10
+b = 5
+c = -4
+d = 2
+a = b++ + --c + --d + b--
+
+4.
+x= 15
+y = 16
+if( ++x > 15 && ++y < 17 ) -> &
+{
+    x++;
+}
+else{
+    y++;
+}
+
+5.WAP to check which number is greater without using conditions ( if - else ) -> (num1 +num2 -abs(num1-num2)/2)
+
+Control Statement :
+
+    conditional controls :
+        - if else
+        - nested if else 
+        - else if 
+        - switch case
+    looping controlsc:
+        - for -> it is an entry control loop.
+        - while
+        - do while
+    jumping Statement :
+        - break
+        - continue
+        - goto
+
+Ques.
+1. WAP to check wether the number is positive or negative
+2. WAP to check wether a candidate is eligible for voting or not 
+3. WAP for Grade System for students (avg >=75 A+ ,avg>=60 A , avg>=45 B,avg >= 33 C)
+4.
+if basic salary is eaual or greater than equal to 10000 HRA 10%, TA 20%
+sal >= 50,000 HRA 30%, TA 30%
+5. GIven a circle with center x1 , y1 and radius r , and a point x2 , y2 , determine where the point lies -> Distance = sqrt{(x2 - x1)^2+(y2 - y1)^2}
+6.WAP to check wehter a triangle is valid or 
+7. WAP to find the root of a quadratic equation 
+
+loop ques.
+1.WAP to print for either ascending or descending if n>m then loop will be in descending order , if n < m then loop will be ascending order 
+2.WAP to print reverse number without using while loop. ( 123 -> 321 ).
+3.WAP to check wether a num is an armstrong or not .
+4.WAP to check prime number.
+5.WAP to print pascal triangle.
+6.WAP to check wether a number is palindrome or not.
+
+Introduction to ARRAY :
+
+Array is a collection of homogeneous data element (similar Datatypes) 
+Array is a Derived Datatype.
+Indexing of Array is always started from 0.
+Array has last index n-1 .
+Array always allot memory in a sequence.
+Types :
+    - one Dimensional
+    - multi Dimensional
+        -> 2d
+        -> 3d
+
+Initialization of 1D Array :
+     int arr[5] = {1,2,3,4,5};
+     int arr[] = {1,2,3,4,5,6,7,8,9,0};
+     int arr[4];
+
+Ques
+1. WAP to find prime element of an ARRAY
+2. WAP to count total duplicate element of an array .
+3. WAP to print second largest element of an array .
+4. WAP to find the missing num from the array using XOR opertaor.
+
+Intro to Function 
+
+    Types of Function :
+
+        - fnc with Return Type and Parameter : int Add( int , int );
+        - fnc with return type without parameter : int Add();
+        - fnc without return type and with parameter : void Add(int int);
+        - fnc without return type and parameter : void Add();
+        
+
+Intro to String :
+    -> Sequence of characters 
+    -> Collection of characters 
+
+    ch = 'a' s ='a'(string 's' is stored with a blacnk space at the last i.e. the null \0)
+
+    string in c has an internal pointer thats why it does not require and adress Reference to scan a particular string.
+
+
+Dynamic Memory Allocation :
+
+    ->Malloc()
+    ->calloc()
+    ->relloc()
+    ->free()
+
+Structure :
+    - User defined Datatype
+    - Collection of heterogeneous element
+
+    Struct student
+    {
+        int id;
+        cahr name[10];
+    } 
+
+    Ques.
+    1.WAP to make a structure of employess with elements : empid,name,salary
+    Display the name of employee , whos salary is more than 20,000
+
+UNION :
+    - Memory effecient as compared to Structure
+    - Stores one value at a time and that value is manipulated 
+
+File Handling :
+
+    FILE -> sequence of characters
