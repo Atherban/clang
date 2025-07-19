@@ -1,0 +1,62 @@
+Introduction to OOPS :
+
+    - Object
+    - Encapsulation
+    - Class : It is user defined datatype , declared/defined using class kyeword
+
+        class class_name{
+            //3 Access Modifier
+            public;
+            pivate; (Default) - cannot be Accessed outside the class  
+            protected; - can be Accessed by the child classes or classes having relation    with it.
+        }
+
+        - Static data Members of CLASS :
+            can be acessed using : datatype class_name :: variable_name
+            -> by Default gives a garbage value
+            -> Static member functions cannot acess class level non static data member
+
+        This keyword -> reference to the current member Function.
+        New keyword -> Used with pointer to create new data object.
+
+        Friend Function :
+            - It does not follow any rule of a class as it is not a member of a class , that can directly acess private data members of a class. 
+
+        - Defining a declared function outside the class:
+        return_type class_name :: func_name(params){
+            body of func
+        }
+
+        Constructor :
+            - is a special member function , which is used to initalize an object of class . It is special becuase it invokes automatically whenever an object is created .
+
+        - Properties :
+            ->Constructor name and class name must be same.
+            ->Constructor does not have any return type.
+            ->Constructor should always be declared within the public acess Modifier.
+            ->We cannot use Constructor as virtual.
+        
+        class class_name{
+            public:
+            Constructor_name{
+                body of the Constructor
+            }
+        };
+
+        -Types of Constructor:
+            ->Default : if we do not create our own Constructor then compiler creates a Constructor to initalize an object of class.
+            ->Parameterized : Constructor having some kinds of parameters.
+            ->Non-Parameterized
+            ->copy
+
+    - Data Abstractio
+    - Data Encapsulation
+    - Inheritance
+    - Polymorphism
+        ->Compile Time : Static Binding , early Binding
+        Operator Overloading : We cannot directly operate on data objects , thats why we use Operator Overloading.
+        ->Run Time : Dynamic Binding , Late Binding
+        Virtual Function : Using kyeword virtual.
+    - Message Passing
+
+    
