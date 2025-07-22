@@ -1,0 +1,1 @@
+class Child : public Parent
