@@ -20,10 +20,12 @@ int main()
         arr[i] = temp;
     }
     printf("Sorted Array :\n");
+    printf("[ ");
     for (i = 0; i < n; i++)
     {
         printf("%d ", arr[i]);
     }
+    printf("]");
 
     return 0;
 }

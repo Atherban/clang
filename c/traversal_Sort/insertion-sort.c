@@ -6,14 +6,14 @@ int main()
     int size = sizeof(arr) / sizeof(arr[0]);
     for (int i = 1; i < size; i++)
     {
-        int key = arr[i];
+        int temp = arr[i];
         int previous = i - 1;
-        while (previous >= 0 && arr[previous] > key)
+        while (previous >= 0 && arr[previous] > temp)
         {
             arr[previous + 1] = arr[previous];
             previous--;
         }
-        arr[previous + 1] = key;
+        arr[previous + 1] = temp;
     }
     printf("\n[ ");
     for (int i = 0; i < size; i++)

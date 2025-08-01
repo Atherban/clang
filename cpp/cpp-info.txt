@@ -46,17 +46,183 @@ Introduction to OOPS :
         -Types of Constructor:
             ->Default : if we do not create our own Constructor then compiler creates a Constructor to initalize an object of class.
             ->Parameterized : Constructor having some kinds of parameters.
-            ->Non-Parameterized
-            ->copy
+            ->Non-Parameterized : No parameters (same as default)
+            ->copy : A copy constructor is a special constructor in C++ that creates a new object as a copy of an existing object.
 
-    - Data Abstractio
+        -Destructor VS Constructor:
+            ->Destructor can be made virtual using virtual keyword, whereas constructor cannot.
+            -> One is used to assign or create object whereas other is used to destroy the object or its memory .
+
+        -Operator Overloading:
+            ->it is used to achive compile time Polymorphism
+            ->basically it is used to perform operations on user defined datatypes.
+            ->Operators that can be overloaded :
+                (::) scope resolution 
+                sizeof
+                conditional/ternary?
+                (.)Member selection
+                (->)pointer member selection
+
+                return_type Operator operator_name(params)
+                {
+                    body//;
+                }
+
+                return_type class_name operator::operator_name(params)
+                {
+                    body//;
+                }
+
+                Rules for opertaing Overloading :
+                -> we can overload only the exsisiting Operator.
+                -> if we overload unary Operator using member func
+                i.e operator func dont have any arguements or params
+                -> if we overload unary operator using friend func than operator func have  one arguement
+                -> if we overload binary operator using member func , then opertaor func have 1 arguement.
+                -> if we overload binary operator using friend func then opertaor func have two arguements.
+
+    - Data Abstraction
     - Data Encapsulation
     - Inheritance
+        
+        ->It refers to the reusablity of the code 
+        ->In Inheritance there are two classes i.e tyhe basec class or the child class and the parent class or the suoer class.
+
+        class derived : public base
+
+        ->Types of Inheritance:
+
+            -single : a derived class inherits from only one base class.
+            -multiple : a class is derived from more than one base class.
+            -multilevel : a class is derived from another derived class, forming a chain.
+            -heirarichal : multiple classes are derived from the same base class.
+            -hybrid
+
+        - Virtual Function : 
+            ->it is a member function of base class which can also be redefiend in the derived class.
+            -> it telss the compiler to perform dynamic linking.
+
+        - Pure Virtual Function :
+            ->A pure virtual function makes a class abstract
+                You cannot instantiate the abstract class directly.
+                Derived classes must override the pure virtual function.
+
+        -Exception :
+            ->it is an unwanted event / code which occurs during the execution of program to disturb flow of program.
+            ->it is also called abnormal condition that terminates or interuppts the program.
+
+        -Exception Handling :
+            ->allows you to handle runtime errors (like divide by zero, out-of-range access, etc.) using the following keywords:
+
+                try – block that may throw an exception
+                throw – to throw an exception
+                catch – block that handles the thrown exception
+
+                try {
+                    // Code that might throw an exception
+                    throw exception_value;
+                }
+                catch (type_of_exception e) {
+                    // Handle the exception
+                }
+
+        -Template 
+            ->Templates in C++ allow writing generic code that works with any data type. There are two main types:
+
+            Function Templates
+
+            Class Templates
+
     - Polymorphism
+
         ->Compile Time : Static Binding , early Binding
         Operator Overloading : We cannot directly operate on data objects , thats why we use Operator Overloading.
+
         ->Run Time : Dynamic Binding , Late Binding
         Virtual Function : Using kyeword virtual.
-    - Message Passing
 
-    
+    - Message Passing
+File Handling:
+    - file handling is done using the fstream library which provides:
+
+        | Stream Class | Purpose                    |
+        | ------------ | -------------------------- |
+        | `ifstream`   | Input file stream (read)   |
+        | `ofstream`   | Output file stream (write) |
+        | `fstream`    | Both input & output        |
+
+        -> ifstream (Input File Stream)
+            Purpose: For reading data from files.
+            Header Required: #include <fstream>
+            Common Modes:
+                ios::in (default)
+                ios::binary (for binary files)
+
+        -> ofstream (Output File Stream)
+            Purpose: For writing data to files.
+            Header Required: #include <fstream>
+            Common Modes:
+                ios::out (default)
+                ios::app (append)
+                ios::trunc (truncate/overwrite)
+                ios::binary (binary file)
+
+        -> fstream (File Stream for both input & output)
+            Purpose: For reading and writing to the same file.
+            Header Required: #include <fstream>
+            Common Modes:
+                ios::in | ios::out (read + write)
+                Can combine with ios::app, ios::binary, etc.
+
+        | Feature              | `ifstream` | `ofstream` | `fstream` |
+        | -------------------- | ---------- | ---------- | --------- |
+        | Read from file       | ✅          | ❌          | ✅       |
+        | Write to file        | ❌          | ✅          | ✅       |
+        | Append               | ❌          | ✅          | ✅       |
+        | Binary support       | ✅          | ✅          | ✅       |
+        | File pointer control | ❌          | ❌          | ✅       |
+
+
+    #include <fstream>
+
+    - File Modes :
+
+        | Mode          | Purpose                          |
+        | ------------- | -------------------------------- |
+        | `ios::in`     | Open for reading                 |
+        | `ios::out`    | Open for writing                 |
+        | `ios::app`    | Append to end of file            |
+        | `ios::ate`    | Open and move to end immediately |
+        | `ios::trunc`  | Truncate file if it exists       |
+        | `ios::binary` | Open in binary mode              |
+
+STL - Standard Template library :
+
+        Container -> Predefined Data Structures
+
+            - Vector : 
+                vector<int> v ;
+                v.capacity(); // Gives the maximum capacity of the vector that increases dynamically.
+                v.size(); // gives the total number of elements
+            - List :
+                list<int> l;
+                l.push_back(56);
+                l.push_front(20);
+
+            - Stream
+            - Map :
+                It stores data in the form of pairs  ,first element of pair is called key another is called value .
+                We can not insert duplicate key in Map.
+
+        Iterator -> Similar to pointer ( Kind of Object )
+
+            - begin()
+            - end()
+            - rbegin()
+            - rend()
+
+        Algorithms -> Predefined func/ Methods
+            - sort 
+            - reverse
+            - min /max
+            - count etc...

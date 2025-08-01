@@ -1,0 +1,12 @@
+Introduction of Data Structure using C programming :
+    
+    Malloc() -> Dynamic Memory Allocation Func, used to allocate a single block at run time.
+             -> If memory allocation is done successfully then it will return a void pointer , that needs to be type casted based on the type required or else it would return a null pointer .
+
+        ptr = (int *)malloc(n * sizeof(int));
+        p = (int *)malloc(5 * sizeof(int)); // Here size of the block will be 20 bytes in heap memory
+
+
+    Linked List -> It is effecient in terms of INsertion and Deletion ,i.e. it has time complexity of O(1) [constant time].
+                -> It is divided into two components , one stores data and other stores the memory adress for next list.
+                -> It can either be empty or may have some nodes i.e. HEAD may point NULL or the First node of the list.
