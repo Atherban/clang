@@ -10,3 +10,33 @@ Introduction of Data Structure using C programming :
     Linked List -> It is effecient in terms of INsertion and Deletion ,i.e. it has time complexity of O(1) [constant time].
                 -> It is divided into two components , one stores data and other stores the memory adress for next list.
                 -> It can either be empty or may have some nodes i.e. HEAD may point NULL or the First node of the list.
+
+    Stack -> A linear Data Structure that follow LIFO nature i.e. Last in First Out.
+          -> It returns only 1 pointer i.e. Top , if the stack is empty than top is NULL or 0, otherwise it return the Top element of the stack or the element that is most recently inserted.
+          //Push
+          -> if(top == size -1 )
+            {
+                printf("Overflow");
+            }
+            else{
+                top++;
+                stack[top] = data;
+            }
+          //Pop
+          -> if(top == -1)
+            {
+                Empty
+            }
+            else{
+                var = stack[top] ;
+                top --;
+            }
+    
+    Queue ->  it is a inear data structure in which insertion of element is done from rear end and deletion is done from the front end. Works in FIFO manner i.e. First in First Out.
+
+        - TYPES of Queue :
+
+            ->linear :
+            ->Circular :
+            ->Priority :
+            ->dQueue :

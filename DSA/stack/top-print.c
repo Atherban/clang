@@ -1,4 +1,5 @@
-// Stack Implementation
+// WAP to print the top element of the stack
+//  Stack Implementation
 #include <stdio.h>
 #include <stdlib.h>
 int stack[10];
@@ -32,13 +33,24 @@ void pop_elem()
         top--;
     }
 }
-
 void display()
 {
     printf("[ ");
-    for (int i = 0; i != top; i++)
+    for (int i = 0; i != top + 1; i++)
     {
         printf("%d ", stack[i]);
+    }
+    printf("]");
+}
+void display_top()
+{
+    printf("[ ");
+    for (int i = 0; i < n; i++)
+    {
+        if (i == top)
+        {
+            printf("Stack Top : %d", stack[i]);
+        }
     }
     printf("]");
 }
@@ -54,7 +66,8 @@ int main()
         printf("1.Push\n");
         printf("2.Pop\n");
         printf("3.Display\n");
-        printf("4.Exit\n");
+        printf("4.Display TOP element\n");
+        printf("5.Exit\n");
         printf("----------------------\n");
         scanf("%d", &ch);
         switch (ch)
@@ -70,6 +83,9 @@ int main()
             display();
             break;
         case 4:
+            display_top();
+            break;
+        case 5:
             printf("Exiting...");
             exit(0);
             break;
