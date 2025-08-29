@@ -1,0 +1,20 @@
+Binary Tree :
+    -> Each node having at most 2 child nodes and atleast 0 child
+    - Types :
+        - Strict Binary Tree : when a tree has either 2 child nodes or 0.
+        - Complete Binary Tree : when a tree has all the levels filled from left to right.
+
+
+Tree Trversal :
+    -> Inorder : Left -> Root -> Right
+    -> Preorder : Root -> Left ->  Right
+    -> Postorder : Left -> Right -> Root
+
+
+    Binary Search Tree :
+        -> Values less than root goes to the left and value greater than root goes to right.
+
+
+
+    AVL Tree :
+        -> It is a self balanced tree , which was invented by Adelson Velsisi and Landis to overcome the time complexity of bst.

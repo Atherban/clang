@@ -38,5 +38,5 @@ Introduction of Data Structure using C programming :
 
             ->linear :
             ->Circular :
-            ->Priority :
+            ->Priority : Insertion is done based on Priority .There are two types of Priority : min and max (in min , element are inserted in ascending order and vice versa in max)
             ->dQueue :

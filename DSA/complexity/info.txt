@@ -1,0 +1,55 @@
+Time Complexity :
+
+    -> The amount of time taken by an algorithm to run operations as of the length/size of the input.
+
+    -> It is generally expressed using Big O notation.
+
+    -> Linear or constant timecomplexity is considered the best time complexity i.e. O(1).
+
+    O -> Worst case (Upper Bound)
+    Ω -> Best case (Lower Bound)
+    Θ -> Average case (Tight Bound)
+
+    Common Time Complexities :
+        O(1) -> Constant Time
+        O(log n) -> Logarithmic Time  
+        O(n) -> Linear Time
+        O(n log n) -> Linearithmic Time
+        O(n^2) -> Quadratic Time
+        O(2^n) -> Exponential Time
+        O(n!) -> Factorial Time
+
+    How to find Time Complexity :
+
+        1.Ignore all the constants.
+        2.Ignore all the non-dominant terms.
+        3.For nested loops, multiply the time complexities of each loop.
+        4.For consecutive statements, add the time complexities of each statement.
+        
+        example : Bubble Sort -> O(n^2 + n + 1) => O(n^2)
+
+        example : Recursion -> Number of calls * Time taken per call
+
+Space Complexity :
+
+    -> The extra psace or memory / auxiliary space taken by an algorithm to run operations as of the length/size of the input.
+
+    -> It is generally expressed using Big O notation.
+
+    -> Constant or linear space complexity is considered the best space complexity i.e. O(1) or O(n).
+
+    Common Space Complexities :
+        O(1) -> Constant Space
+        O(n) -> Linear Space
+        O(n^2) -> Quadratic Space
+
+    How to find Space Complexity :
+
+        1.Ignore all the constants.
+        2.Ignore all the non-dominant terms.
+        3.For nested loops, multiply the space complexities of each loop.
+        4.For consecutive statements, add the space complexities of each statement.
+        
+        example : Bubble Sort -> O(1 + n) => O(n)
+
+        example : Recursion -> Depth of recursion * Space taken per call

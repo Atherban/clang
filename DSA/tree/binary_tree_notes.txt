@@ -1,0 +1,50 @@
+Tree and Binary Trees
+
+Tree
+- A tree is a hierarchical data structure consisting of nodes.
+- The topmost node is called the root.
+- Each node can have 0 or more child nodes.
+- Height: Longest path from root to a leaf.
+- Applications: File systems, databases, searching, hierarchical data.
+
+------------------------------------------------------------
+Binary Tree
+- Each node can have at most 2 children (Left, Right).
+- At least 0 children (so a leaf node has 0).
+
+Types of Binary Trees
+- Strict/Proper Binary Tree: Every node has either 2 children or 0.
+- Complete Binary Tree: All levels filled, last level filled from left to right.
+- Full Binary Tree: Every node has exactly 0 or 2 children.
+- Perfect Binary Tree: All internal nodes have 2 children, and all leaves are at the same level.
+
+------------------------------------------------------------
+Tree Traversal
+- Inorder (L → Root → R) : Gives sorted order in BST.
+- Preorder (Root → L → R) : Used for copying trees.
+- Postorder (L → R → Root) : Used for deleting/freeing trees.
+- Level Order : Traversal level by level (BFS style).
+
+------------------------------------------------------------
+Binary Search Tree (BST)
+- Special type of Binary Tree:
+  - Left child < Root
+  - Right child > Root
+- Average search, insert, delete → O(log n)
+- Worst case (skewed tree) → O(n)
+
+Use-cases: Searching, range queries, associative arrays.
+
+------------------------------------------------------------
+AVL Tree (Adelson-Velsky & Landis Tree)
+- A self-balancing BST.
+- For every node, the balance factor = height(left) – height(right) must be -1, 0, or 1.
+- Ensures O(log n) for search, insert, delete in all cases.
+
+Rotations (to balance AVL Tree)
+1. LL Rotation (Right Rotation) → when inserted in left of left subtree.
+2. RR Rotation (Left Rotation) → when inserted in right of right subtree.
+3. LR Rotation (Left-Right) → when inserted in right of left subtree.
+4. RL Rotation (Right-Left) → when inserted in left of right subtree.
+
+------------------------------------------------------------
